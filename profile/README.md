@@ -2,37 +2,52 @@
 
 # DevSeat
 
-**Building practical systems for AI agents, developer infrastructure, and automation.**
+**Building practical AI systems and developer infrastructure.**
 
-Tools that make software and AI systems more capable, observable, persistent, and easier to operate.
+DevSeat develops focused software products for persistent AI, verified computation, and fast local tooling.
 
 </div>
 
 ---
 
-## What we build
+## Core products
 
-DevSeat is an engineering organization focused on practical software systems around AI agents, developer tooling, automation, and local-first infrastructure.
+DevSeat's primary product line currently consists of three systems.
 
-Our work currently spans:
+### BIO
 
-- **Agent infrastructure** — persistent runtimes, memory, capability layers, and model-independent systems
-- **MCP tooling** — measurement, compute offloading, tool infrastructure, and agent-facing services
-- **Developer infrastructure** — fast local utilities, diagnostics, automation, and reusable service layers
-- **Systems research** — networking, resilient software, local AI, simulation, and experimental architectures
+**A persistent AI system built around durable user-owned memory and context.**
 
-## Selected projects
+BIO is designed so the user's memory and long-lived context remain independent from any single model or client. Its architecture separates the user-facing client from the Core that owns and governs persistent state.
 
-> Projects are currently being consolidated under the DevSeat organization. Some repositories still live under the original maintainer account during migration.
+> BIO Core is developed privately.
 
-| Project | What it does |
-| --- | --- |
-| [**MCPMeter**](https://github.com/stickleetoto/MCPMeter) | Local-first measurement proxy for MCP traffic, tokenized payload, latency, and tool overhead. |
-| [**YiSang**](https://github.com/stickleetoto/YiSang) | Model-independent persistent-agent runtime where memory and capability survive model replacement. |
-| [**Yekaterina**](https://github.com/stickleetoto/Yekaterina) | Deterministic compute engine for LLM agents with a deliberately small MCP tool surface. |
-| [**Smart Kernel Brain**](https://github.com/stickleetoto/Smart-Kernel-Brain) | High-performance local file discovery for humans and AI agents through CLI, daemon, and MCP. |
-| [**Nuntius**](https://github.com/stickleetoto/Nuntius) | Cross-platform network inspection, snapshot/diff, live watch, path diagnostics, and MCP access. |
-| [**Maverick**](https://github.com/stickleetoto/Maverick) | Flight simulation testbed for AI pilot and unmanned-aircraft research. |
+### Yekaterina
+
+**Deterministic computation for LLM agents with a minimal MCP surface.**
+
+[Yekaterina](https://github.com/stickleetoto/Yekaterina) exposes a large verified operation registry through a deliberately small interface, allowing agents to offload computation without inflating their visible tool surface.
+
+The public v1.4 line serves as the free baseline, while later commercial development is maintained separately.
+
+### Smart Kernel Brain
+
+**High-performance local file discovery for humans and AI agents.**
+
+[Smart Kernel Brain](https://github.com/stickleetoto/Smart-Kernel-Brain) provides fast local file lookup through a CLI, resident daemon, and MCP interface while keeping the search path local and lightweight.
+
+---
+
+## Research & engineering tools
+
+DevSeat also develops supporting infrastructure and experimental systems. These projects are not the primary product line, but they contribute technology, tooling, and research to the wider DevSeat ecosystem.
+
+Examples include:
+
+- [MCPMeter](https://github.com/stickleetoto/MCPMeter) — MCP cost, latency, payload, and tool-overhead measurement
+- [YiSang](https://github.com/stickleetoto/YiSang) — model-independent persistent-agent runtime research
+- [Nuntius](https://github.com/stickleetoto/Nuntius) — cross-platform network inspection and diagnostics
+- [Maverick](https://github.com/stickleetoto/Maverick) — AI pilot and unmanned-aircraft simulation research
 
 ## Engineering principles
 
@@ -45,24 +60,24 @@ Critical workflows should remain useful without depending on a remote service.
 Performance, cost, behavior, and regressions should be observable rather than guessed.
 
 **Modular**  
-Models, runtimes, tools, storage, and interfaces should be replaceable without rebuilding everything.
+Models, runtimes, tools, storage, and interfaces should remain replaceable.
 
 **Verification-oriented**  
-Tests, reproducible checks, stable interfaces, and explicit boundaries matter more than impressive demos.
+Stable interfaces, reproducible checks, and explicit system boundaries matter.
 
 **Built for reuse**  
-Infrastructure should become a foundation for the next project instead of being rewritten every time.
+Shared infrastructure should strengthen future DevSeat products instead of being rebuilt repeatedly.
 
 ## Direction
 
-DevSeat is gradually bringing its projects into a shared ecosystem: common infrastructure, consistent interfaces, reusable services, and stronger automation between tools.
+DevSeat is building an ecosystem around three core products — **BIO, Yekaterina, and Smart Kernel Brain** — supported by reusable internal infrastructure and ongoing systems research.
 
-The goal is not to build one monolithic platform. It is to build a collection of interoperable systems that can evolve independently while working better together.
+Repositories are gradually being consolidated under the DevSeat organization.
 
 ---
 
 <div align="center">
 
-**DevSeat · AI Systems · Developer Infrastructure · Automation**
+**DevSeat · BIO · Yekaterina · Smart Kernel Brain**
 
 </div>
